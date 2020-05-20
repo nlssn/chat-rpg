@@ -1,6 +1,6 @@
 {
   "name": "chat-rpg",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "a chat application which is also an RPG",
   "main": "index.js",
   "scripts": {
