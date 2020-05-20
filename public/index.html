@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>chat-rpg</title>
-</head>
-<body>
-   <h1>chat-rpg</h1>
-
-   <div id="chat-messages">
-   </div>
-
-   <form id="chat-form">
-      <input
-          id="msg"
-          type="text"
-          placeholder="Write something..."
-          required
-          autocomplete="off"
-      />
-      <button class="btn">Send</button>
-   </form>
-
-   <script src="/socket.io/socket.io.js"></script>
-   <script src="assets/js/main.js"></script>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+   <body>
+      <div class="container">
+         <form action="chat.html">
+            <div class="form-control">
+               <label for="username">Username</label>
+               <input type="text" name="username" id="username" placeholder="Enter username..." required="required"/>
+            </div>
+            <div class="form-control">
+               <label for="room">Room</label>
+               <select name="room" id="room">
+                  <option value="tavern">The Tavern</option>
+                  <option value="dungeon">The Dungeon</option>
+               </select>
+            </div>
+            <button type="submit" class="btn">Join Chat</button>
+         </form>
+      </div>
+   </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>chat-rpg</title>
+</head>
+<body>
+   <h1>chat-rpg</h1>
+   <div id="room-info">
+      <p id="room-name"></p>
+      <p>Connected users:</p>
+      <ul id="users"></ul>
+   </div>
+
+   <div id="chat-messages">
+   </div>
+
+   <form id="chat-form">
+      <input
+          id="msg"
+          type="text"
+          placeholder="Write something..."
+          required
+          autocomplete="off"
+      />
+      <button class="btn">Send</button>
+   </form>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"></script>
+   <script src="/socket.io/socket.io.js"></script>
+   <script src="assets/js/main.js"></script>
+</body>
+</html>
