@@ -7,6 +7,21 @@
 </head>
 <body>
    <h1>chat-rpg</h1>
+
+   <div id="chat-messages">
+   </div>
+
+   <form id="chat-form">
+      <input
+          id="msg"
+          type="text"
+          placeholder="Write something..."
+          required
+          autocomplete="off"
+      />
+      <button class="btn">Send</button>
+   </form>
+
    <script src="/socket.io/socket.io.js"></script>
    <script src="assets/js/main.js"></script>
 </body>

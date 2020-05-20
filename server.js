@@ -12,7 +12,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // What happens when a player is connected
 io.on('connection', socket => {
-   console.log('A new connection was established');
+   // Welcome the new player
+   socket.emit('message', 'Welcome to chat-rpg');
+
+   // Broadcast when a player connects
+   socket.broadcast.emit('message', 'A player has joined the chat');
+
+   // On disconnect
+   socket.on('disconnect', () => {
+      io.emit('message', 'A player has left the chat');
+   });
+
+   // Recievning a new chatMessage
+   socket.on('chatMessage', msg => {
+      // Send it to everyone
+      io.emit('message', msg);
+   });
 });
 
 // Start listening on specified PORT
